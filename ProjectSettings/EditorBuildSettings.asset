@@ -1,0 +1,14 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 20ff643170180e142831f0c90e26a973
+  - enabled: 1
+    path: Assets/Scenes/TerrainZelda.unity
+    guid: 93299d00612faea4f9ece56e686867cf
+  m_configObjects: {}
