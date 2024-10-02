@@ -1,77 +1,60 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PauseAndGameOver : MonoBehaviour
 {
+    public GameObject pauseMenu;
+
     private bool isPaused = false;
-
-    public Sprite playSprite;
-    public Sprite pauseSprite;
-
-
-    public GameObject pauseMenuUI;
-
-    public Image buttonImage;
-
-    public Button resumeButton;
-
-    public Button restartButton;
-
-    public Button playButton;
-
 
     private void Start()
     {
-        pauseMenuUI.SetActive(false);
+        pauseMenu.SetActive(false);
 
-        //restartButton.onClick.AddListener();
+        //resumeButton.onClick.AddListener(ResumeGame);
     }
-
 
     public void togglePause()
     {
-        isPaused = !isPaused;
-
-        pauseMenuUI.SetActive(true);
-         
-
-        if (isPaused)
+        if(isPaused)
         {
-            PauseGame();
+            pauseMenu.SetActive(false);
+
+            Time.timeScale = 1;
+            isPaused = false;
         }
 
         else
         {
-            ResumeGame();
+            pauseMenu.SetActive(true);
+
+            Time.timeScale = 0;
+            isPaused = true;
+
         }
-
-        
     }
 
-
-    void PauseGame()
+    public void ResumeGame()
     {
-        isPaused = true;
+        pauseMenu.SetActive(false);
 
-        Time.timeScale = 0;
-
-        //buttonImage.sprite = pauseSprite;
-
-        pauseMenuUI.SetActive(true);
-    }
-
-
-    void ResumeGame()
-    {
         Time.timeScale = 1;
 
-        //buttonImage.sprite = pauseSprite;
-
-        pauseMenuUI.SetActive(false);
-
         isPaused = false;
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        Time.timeScale = 1;
+    }
+    public void GoToMainMenu()
+    {
+        Debug.Log("Going to main menu..");
     }
 
 

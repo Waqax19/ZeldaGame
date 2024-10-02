@@ -1139,7 +1139,6 @@ GameObject:
   - component: {fileID: 438640855}
   - component: {fileID: 438640854}
   - component: {fileID: 438640853}
-  - component: {fileID: 438640852}
   m_Layer: 5
   m_Name: RestartButton
   m_TagString: Untagged
@@ -1167,25 +1166,6 @@ RectTransform:
   m_AnchoredPosition: {x: -75.26471, y: -59.28839}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &438640852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438640850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ec3e5eba349c9147b81eae9adcc5d1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playSprite: {fileID: 21300000, guid: 02522c695877e9d40892fac3f6efc2e2, type: 3}
-  pauseSprite: {fileID: 21300000, guid: 85e99e7ecc2ac0340831d9387488c62f, type: 3}
-  pauseMenuUI: {fileID: 1826699935}
-  buttonImage: {fileID: 438640854}
-  resumeButton: {fileID: 1319657985}
-  restartButton: {fileID: 438640853}
-  playButton: {fileID: 680020716}
 --- !u!114 &438640853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1230,9 +1210,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 438640852}
+      - m_Target: {fileID: 1330211523}
         m_TargetAssemblyTypeName: PauseAndGameOver, Assembly-CSharp
-        m_MethodName: togglePause
+        m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1691,7 +1671,6 @@ GameObject:
   - component: {fileID: 680020718}
   - component: {fileID: 680020717}
   - component: {fileID: 680020716}
-  - component: {fileID: 680020715}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -1719,25 +1698,6 @@ RectTransform:
   m_AnchoredPosition: {x: -75.26471, y: -59.28839}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &680020715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 680020713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ec3e5eba349c9147b81eae9adcc5d1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playSprite: {fileID: 21300000, guid: 02522c695877e9d40892fac3f6efc2e2, type: 3}
-  pauseSprite: {fileID: 21300000, guid: 85e99e7ecc2ac0340831d9387488c62f, type: 3}
-  pauseMenuUI: {fileID: 1826699935}
-  buttonImage: {fileID: 680020717}
-  resumeButton: {fileID: 1319657985}
-  restartButton: {fileID: 438640853}
-  playButton: {fileID: 680020716}
 --- !u!114 &680020716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1781,19 +1741,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 680020717}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 680020715}
-        m_TargetAssemblyTypeName: PauseAndGameOver, Assembly-CSharp
-        m_MethodName: togglePause
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &680020717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3145,7 +3093,6 @@ GameObject:
   - component: {fileID: 1319657987}
   - component: {fileID: 1319657986}
   - component: {fileID: 1319657985}
-  - component: {fileID: 1319657984}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -3173,25 +3120,6 @@ RectTransform:
   m_AnchoredPosition: {x: -79.26471, y: 47.711624}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1319657984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1319657982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ec3e5eba349c9147b81eae9adcc5d1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playSprite: {fileID: 21300000, guid: 02522c695877e9d40892fac3f6efc2e2, type: 3}
-  pauseSprite: {fileID: 21300000, guid: 85e99e7ecc2ac0340831d9387488c62f, type: 3}
-  pauseMenuUI: {fileID: 1826699935}
-  buttonImage: {fileID: 1319657986}
-  resumeButton: {fileID: 1319657985}
-  restartButton: {fileID: 438640853}
-  playButton: {fileID: 680020716}
 --- !u!114 &1319657985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3236,9 +3164,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1319657984}
+      - m_Target: {fileID: 1330211523}
         m_TargetAssemblyTypeName: PauseAndGameOver, Assembly-CSharp
-        m_MethodName: togglePause
+        m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3432,13 +3360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec3e5eba349c9147b81eae9adcc5d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playSprite: {fileID: 21300000, guid: 02522c695877e9d40892fac3f6efc2e2, type: 3}
-  pauseSprite: {fileID: 21300000, guid: 85e99e7ecc2ac0340831d9387488c62f, type: 3}
-  pauseMenuUI: {fileID: 1826699935}
-  buttonImage: {fileID: 60369986}
-  resumeButton: {fileID: 1319657985}
-  restartButton: {fileID: 438640853}
-  playButton: {fileID: 680020716}
+  pauseMenu: {fileID: 1826699935}
 --- !u!1 &1361807925
 GameObject:
   m_ObjectHideFlags: 0
